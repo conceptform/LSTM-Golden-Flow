@@ -7,3 +7,5 @@ Cicero famously praised Aristotle's prose as a <i>flowing river of gold</i>. Let
 
 ![](https://github.com/conceptform/LSTM-Golden-Flow/blob/master/Peephole_Long_Short-Term_Memory.svg)
 ![](https://github.com/conceptform/LSTM-Golden-Flow/blob/master/forget_gate.svg)
+
+https://github.com/conceptform/LSTM-Golden-Flow/blob/master/LSTM_aristotle.py
