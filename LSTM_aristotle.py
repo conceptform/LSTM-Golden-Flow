@@ -10,10 +10,6 @@ import random
 import sys
 import io
 
-
-# In[ ]:
-
-
 path = get_file('nicomachaen.mb.txt', origin='http://classics.mit.edu/Aristotle/nicomachaen.mb.txt')
 with io.open(path, encoding='utf-8') as f:
     text = f.read().lower()
@@ -24,10 +20,6 @@ print('total chars:', len(chars))
 char_indices = dict((c, i) for i, c in enumerate(chars))
 indices_char = dict((i, c) for i, c in enumerate(chars))
 
-
-# In[ ]:
-
-
 maxlen = 40
 step = 3
 sentences = []
@@ -36,10 +28,6 @@ for i in range(0, len(text) - maxlen, step):
     sentences.append(text[i: i + maxlen])
     next_chars.append(text[i + maxlen])
 print('nb sequences:', len(sentences))
-
-
-# In[ ]:
-
 
 print('Vectorization...')
 x = np.zeros((len(sentences), maxlen, len(chars)), dtype=np.bool)
@@ -65,7 +53,6 @@ def sample(preds, temperature=1.0):
     preds = exp_preds / np.sum(exp_preds)
     probas = np.random.multinomial(1, preds, 1)
     return np.argmax(probas)
-
 
 def on_epoch_end(epoch, logs):
     print()
