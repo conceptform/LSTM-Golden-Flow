@@ -1,9 +1,3 @@
-
-# coding: utf-8
-
-# In[ ]:
-
-
 from __future__ import print_function
 from keras.callbacks import LambdaCallback
 from keras.models import Sequential
@@ -109,4 +103,3 @@ model.fit(x, y,
           batch_size=128,
           epochs=60,
 callbacks=[print_callback])
-
